@@ -1,0 +1,67 @@
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prop-Maker Feather Sensor Data</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="#">
+                    <h1>RayGun MK1</h1>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Data Section -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <div class="glitch">Real-Time Sensor Data</div>
+            <div class="container">
+                <button class="cta-button" id="connectButton">Click to connect Feather</button>
+                <div class="sensor-data">
+                    <div class="data-item">
+                        <h2>Potentiometer Value</h2>
+                        <p id="pot_value">--</p>
+                    </div>
+                    <div class="data-item">
+                        <h2>Barrel State</h2>
+                        <p id="hall_state">--</p>
+                    </div>
+                    <div class="data-item">
+                        <h2>Photocell Value</h2>
+                        <p id="photo_state">--</p>
+                    </div>
+                    <div class="data-item">
+                        <h2>Accelerometer (X, Y, Z)</h2>
+                        <p id="accel_x">--</p>
+                        <p id="accel_y">--</p>
+                        <p id="accel_z">--</p>
+                    </div>
+                    <div class="data-item">
+                        <h2>Cell Status</h2>
+                        <p id="battery_status">--</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>Created by Ben Pike &copy; 2026. All rights reserved.</p>
+            <p class="disclaimer">Data visualization of what's going on inside the RGMK1. Powered by Web Serial API and CircuitPython.</p>
+        </div>
+    </footer>
+    <script src="./script.js"></script>
+</body>
+</html>

@@ -64,8 +64,8 @@ async function readSerialData() {
                     accelYEl.textContent = data["'accel_y'"] || '--';
                     accelZEl.textContent = data["'accel_z'"] || '--';
                     batteryStatusEl.textContent = data["'battery_status'"] || '--';
-                    needlePositionEl.textContent = data["'needle_position'"] || '--';
-                    ammoLeftEl.textContent = 20 - data["'ammo'"] || '--';
+                    needlePositionEl.textContent = data["'needle_position'"];
+                    ammoLeftEl.textContent = 20 - data["'ammo'"];
                 }
             }
         }

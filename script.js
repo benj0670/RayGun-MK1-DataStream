@@ -47,8 +47,8 @@ async function readSerialData() {
                         if (pair.includes(':')) {
                             const parts = pair.split(':');
                             if (parts.length === 2) {
-                                const key = parts[0].trim().replace(/[{}]/g, '');;
-                                const value = parts[1].trim().replace(/[{}]/g, '');;
+                                const key = parts[0].trim().replace(/[{}]/g, '');
+                                const value = parts[1].trim().replace(/[{}]/g, '');
                                 //console.log("Found key: " + key + "   and value: " + value)
                                 // Store the parsed key-value pair
                                 data[key] = value;
@@ -57,13 +57,13 @@ async function readSerialData() {
                     }
 
                     // Display the extracted data
-                    hallStateEl.textContent = data["'barrel_open'"] || '--';
+                    hallStateEl.textContent = data["'barrel_open'"].replace(/[']/g, '') || '--';
                     potValueEl.textContent = data["'pot_value'"] || '--';
                     photoStateEl.textContent = data["'photo_state'"] || '--';
                     accelXEl.textContent = data["'accel_x'"] || '--';
                     accelYEl.textContent = data["'accel_y'"] || '--';
                     accelZEl.textContent = data["'accel_z'"] || '--';
-                    batteryStatusEl.textContent = data["'battery_status'"] || '--';
+                    batteryStatusEl.textContent = data["'battery_status'"].replace(/[']/g, '') || '--';
                     needlePositionEl.textContent = data["'needle_position'"];
                     ammoLeftEl.textContent = 20 - data["'ammo'"];
                 }

@@ -7,6 +7,8 @@ const accelZEl = document.getElementById('accel_z');
 const batteryStatusEl = document.getElementById('battery_status');
 const batteryLevelEl = document.getElementById('battery_level');
 const connectButton = document.getElementById('connectButton');
+const needlePositionEl = document.getElementById('needle_position');
+const ammoLeftEl = document.getElementById('ammo');
 const data = {};
 var barrel = "";
 
@@ -62,6 +64,8 @@ async function readSerialData() {
                     accelYEl.textContent = data["'accel_y'"] || '--';
                     accelZEl.textContent = data["'accel_z'"] || '--';
                     batteryStatusEl.textContent = data["'battery_status'"] || '--';
+                    needlePositionEl.textContent = data["'needle_position'"] || '--';
+                    ammoLeftEl.textContent = 20 - data["'ammo'"] || '--';
                 }
             }
         }
